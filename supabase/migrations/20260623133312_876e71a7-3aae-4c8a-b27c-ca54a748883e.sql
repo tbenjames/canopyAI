@@ -1,0 +1,1 @@
+ALTER TABLE public.sites ADD COLUMN IF NOT EXISTS roles TEXT[] NOT NULL DEFAULT '{}'::text[];

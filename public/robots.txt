@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /sites
+Disallow: /upload
+Disallow: /alerts
+Disallow: /feedback
+
+Sitemap: https://canopystride.dev/sitemap.xml

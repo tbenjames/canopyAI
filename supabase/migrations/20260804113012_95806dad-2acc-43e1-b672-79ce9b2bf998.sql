@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.ensure_monthly_credits(uuid) FROM authenticated;

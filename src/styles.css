@@ -1,0 +1,207 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* CanopyStride AI design system —
+   Dark slate canvas, vibrant green accents, gold/amber CTA highlights,
+   geometric Inter + Outfit typography optimized for outdoor field use. */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--destructive);
+  --color-gold: var(--gold);
+  --color-canopy: var(--canopy);
+  --font-display: "Geist", "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Off-white field-ready surface #F8FAFC */
+  --background: oklch(0.98 0.004 240);
+  /* Deep slate #0F172A for WCAG AA body text */
+  --foreground: oklch(0.21 0.04 260);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.04 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.04 260);
+  /* Forest Green #1A3622 */
+  --primary: oklch(0.30 0.055 152);
+  --primary-foreground: oklch(0.98 0.005 145);
+  --secondary: oklch(0.955 0.008 240);
+  --secondary-foreground: oklch(0.25 0.04 155);
+  --muted: oklch(0.955 0.008 240);
+  --muted-foreground: oklch(0.45 0.025 250);
+  /* Vibrant green accent for CanopyStride */
+  --accent: oklch(0.68 0.18 145);
+  --accent-foreground: oklch(0.16 0.04 160);
+  /* Vibrant canopy green for highlights #22C55E */
+  --canopy: oklch(0.72 0.18 145);
+  /* Gold/Amber #E5A93C kept as a warning accent */
+  --gold: oklch(0.79 0.13 80);
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(0.99 0.005 90);
+  --success: oklch(0.65 0.16 152);
+  --warning: oklch(0.79 0.13 80);
+  /* Defensive border #E2E8F0 */
+  --border: oklch(0.91 0.011 245);
+  --input: oklch(0.93 0.01 245);
+  --ring: oklch(0.45 0.07 152);
+  --chart-1: oklch(0.40 0.08 152);
+  --chart-2: oklch(0.65 0.13 210);
+  --chart-3: oklch(0.79 0.13 80);
+  --chart-4: oklch(0.58 0.2 27);
+  --chart-5: oklch(0.55 0.1 280);
+  --sidebar: oklch(0.21 0.04 260);
+  --sidebar-foreground: oklch(0.98 0.005 145);
+  --sidebar-primary: oklch(0.72 0.18 145);
+  --sidebar-primary-foreground: oklch(0.16 0.04 160);
+  --sidebar-accent: oklch(0.27 0.04 250);
+  --sidebar-accent-foreground: oklch(0.98 0.005 145);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.6 0.1 152);
+
+  /* Field-ready typography scale (clamp = mobile→desktop) */
+  --text-h1: clamp(1.5rem, 1.1rem + 1.5vw, 2rem);     /* 24 → 32 */
+  --text-h2: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem); /* 20 → 24 */
+  --text-h3: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);  /* 16 → 18 */
+  --text-body: 1rem;          /* 16 */
+  --text-meta: 0.875rem;      /* 14 */
+  --text-badge: 0.75rem;      /* 12 */
+}
+
+.dark {
+  --background: oklch(0.16 0.02 260);
+  --foreground: oklch(0.96 0.005 145);
+  --card: oklch(0.22 0.025 260);
+  --card-foreground: oklch(0.96 0.005 145);
+  --popover: oklch(0.22 0.025 260);
+  --popover-foreground: oklch(0.96 0.005 145);
+  --primary: oklch(0.72 0.18 145);
+  --primary-foreground: oklch(0.14 0.02 160);
+  --secondary: oklch(0.28 0.03 260);
+  --secondary-foreground: oklch(0.96 0.005 145);
+  --muted: oklch(0.26 0.025 260);
+  --muted-foreground: oklch(0.72 0.015 145);
+  --accent: oklch(0.72 0.18 145);
+  --accent-foreground: oklch(0.16 0.04 160);
+  --canopy: oklch(0.72 0.18 145);
+  --gold: oklch(0.79 0.13 80);
+  --destructive: oklch(0.68 0.2 25);
+  --destructive-foreground: oklch(0.98 0.005 90);
+  --success: oklch(0.7 0.14 152);
+  --warning: oklch(0.79 0.13 80);
+  --border: oklch(1 0 0 / 14%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: oklch(0.6 0.1 152);
+  --chart-1: oklch(0.7 0.12 152);
+  --chart-2: oklch(0.7 0.14 210);
+  --chart-3: oklch(0.79 0.13 80);
+  --chart-4: oklch(0.68 0.2 25);
+  --chart-5: oklch(0.65 0.12 280);
+  --sidebar: oklch(0.22 0.025 260);
+  --sidebar-foreground: oklch(0.96 0.005 145);
+  --sidebar-primary: oklch(0.72 0.18 145);
+  --sidebar-primary-foreground: oklch(0.14 0.02 160);
+  --sidebar-accent: oklch(0.28 0.03 260);
+  --sidebar-accent-foreground: oklch(0.96 0.005 145);
+  --sidebar-border: oklch(1 0 0 / 14%);
+  --sidebar-ring: oklch(0.6 0.1 152);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { font-size: 16px; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  h1 { font-family: var(--font-display); font-size: var(--text-h1); font-weight: 700; line-height: 1.2; letter-spacing: -0.015em; }
+  h2 { font-family: var(--font-display); font-size: var(--text-h2); font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+  h3 { font-family: var(--font-display); font-size: var(--text-h3); font-weight: 500; line-height: 1.4; }
+  h4 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  small, .text-meta { font-size: var(--text-meta); }
+
+  /* Kill iOS auto-zoom on form controls — must be ≥16px */
+  input, select, textarea {
+    font-size: max(var(--text-body), 16px);
+  }
+  /* Field-ready tap targets */
+  button { min-height: 44px; }
+}
+
+/* Brand-aware utilities */
+@keyframes pulse-amber {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-gold) 45%, transparent); }
+  50%      { box-shadow: 0 0 0 8px color-mix(in oklab, var(--color-gold) 0%, transparent); }
+}
+@utility amber-pulse { animation: pulse-amber 1.8s ease-out infinite; }
+
+/* Telemetry backdrop animations */
+@keyframes telemetry-flow {
+  0%   { stroke-dasharray: 0 1400; stroke-dashoffset: 0; opacity: 0; }
+  20%  { opacity: 1; }
+  100% { stroke-dasharray: 1400 0; stroke-dashoffset: -1400; opacity: 0; }
+}
+@keyframes telemetry-blink {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50%      { opacity: 0.85; transform: scale(1.4); }
+}
+.telemetry-backdrop .telemetry-stroke {
+  stroke-dasharray: 0 1400;
+  animation: telemetry-flow 6s linear infinite;
+}
+.telemetry-backdrop .telemetry-dot {
+  transform-origin: center;
+  animation: telemetry-blink 3s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .telemetry-backdrop .telemetry-stroke,
+  .telemetry-backdrop .telemetry-dot { animation: none; opacity: 0.35; }
+}

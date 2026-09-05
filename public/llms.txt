@@ -1,0 +1,10 @@
+# CanopyStride AI
+
+> AI ecological telemetry for the Tamaraneh Initiative — turning field photos into verifiable mangrove and Moringa restoration signals.
+
+CanopyStride AI reads waterlogging, tidal scouring, salinity stress, and canopy health from standard field photos and videos, mapping results across restoration plots. Built for field teams, community restoration groups, regenerative projects, and institutions.
+
+## Pages
+
+- [Home](/): Overview of CanopyStride AI, workflow, and capability
+- [Sign in](/auth): Access the dashboard
