@@ -61,7 +61,7 @@
     "entities": "4.5.0",
     "input-otp": "^1.4.2",
     "leaflet": "^1.9.4",
-    "lucide-react": "^0.575.0",
+    "lucide-react": "^1.39.0",
     "react": "^19.2.8",
     "react-day-picker": "^10.0.1",
     "react-dom": "^19.2.8",
